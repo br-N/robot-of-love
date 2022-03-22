@@ -19,5 +19,6 @@ num = int(input("How many posts? "))
 # Specified path for webdriver
 path = '/usr/bin/chromedriver'
 
+# Robot start
 meu_robo = LoveRobot(username, password, url, option, num, path)
 meu_robo.start_robot()

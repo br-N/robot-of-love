@@ -52,8 +52,8 @@ class LoveRobot:
 
     def like_photo (self):
         try:
-            # Must change 'Descurtir' to your language (ex: Dislike)
-            self.driver.find_element_by_xpath("//*[@aria-label='Descurtir']")
+            # Must change 'Unlike' to your browser language (Ex: Descurtir)
+            self.driver.find_element_by_xpath("//*[@aria-label='Unlike']")
         except:
             try:
                 self.driver.find_element_by_class_name("fr66n").click()
@@ -64,10 +64,10 @@ class LoveRobot:
 
     def follow_person (self):
         try:
-            # Must change 'Seguir' to your language (ex: Follow)
-            self.driver.find_elements_by_xpath("//button/div[contains(., 'Seguir')]")[0].click()
+            # Must change 'Following' and 'Follow' to your browser language (Ex: Seguindo/Seguir)
+            self.driver.find_elements_by_xpath("//button/div[contains(., 'Following')]")[0]
         except:
-            pass
+            self.driver.find_elements_by_xpath("//button/div[contains(., 'Follow')]")[0].click()
         sleep(randint(1,4))
 
     def next_photo (self):
