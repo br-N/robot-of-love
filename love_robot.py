@@ -6,19 +6,19 @@ from random import randint
 
 class LoveRobot:
 
-    def __init__ (self, my_username, my_password, my_url, my_option, my_num):
+    def __init__ (self, my_username, my_password, my_url, my_option, my_num, my_path):
         self.username = my_username
         self.password = my_password
         self.url = my_url
         self.option = my_option
         self.num = my_num
+        self.path = my_path
 
     def driver_init (self):
-        # Maybe need to use the specified path for webdriver
         driver_options = webdriver.ChromeOptions() # Suppressing init errors (Bluetooth and GPU)
         driver_options.add_experimental_option("excludeSwitches", ['enable-logging'])
 
-        self.driver = webdriver.Chrome(options=driver_options)
+        self.driver = webdriver.Chrome(executable_path = self.path, options = driver_options)
         self.driver.get("https://www.instagram.com/")
         sleep(randint(2,4))
 
