@@ -1,6 +1,6 @@
 # Robot of Love
 
-It's just a simple automation that I made to learn Selenium using Python.
+It's an automation that I made to learn Selenium using Python.
 <br><br>
 
 This bot likes every post and follows every post owner of a specific URL which can be either a tag or a person.
